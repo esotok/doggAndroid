@@ -7,8 +7,8 @@ node {
     sh "./gradlew compileDebugJava"
 
     stage 'Build'
-    sh "./gradlew build"
+    sh "./gradlew assembleRelease"
 
     stage 'Release'
-    archiveArtifacts artifacts: 'build/**/*.apk', fingerprint: true
+    archiveArtifacts artifacts: 'app/**/*.apk', fingerprint: true
 }
