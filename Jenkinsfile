@@ -10,5 +10,5 @@ node {
     sh "./gradlew assembleRelease"
 
     stage 'Release'
-    archiveArtifacts artifacts: 'app/**/*.apk', fingerprint: true
+    archiveArtifacts artifacts: 'app/**/*release*.apk', fingerprint: true
 }
